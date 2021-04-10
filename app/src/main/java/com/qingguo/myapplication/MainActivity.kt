@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
@@ -50,11 +51,9 @@ class MainActivity : AppCompatActivity() {
         if (!Settings.canDrawOverlays(this)) {
             intentSetting()
         } else {
-//            startService(Intent(this, FloatingService::class.java))
 
-
-
-            if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.N){
+            Log.e("BANBEN","手机版本号为："+Build.VERSION.SDK_INT+"|||||"+Build.VERSION_CODES.N)
+            if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.O){
 
                 //画中画
 
